@@ -2,6 +2,7 @@ language: php
 
 php:
   - 8.0
+  - 8.1
 
 arch:
   - amd64
@@ -20,7 +21,7 @@ before_script:
       echo "${DOCKERHUB_PULL_PASSWORD}" | docker login --username "${DOCKERHUB_PULL_USERNAME}" --password-stdin
     fi
   - docker --version
-  - composer install --ignore-platform-reqs
+  - composer update -n
 
 script:
   - vendor/bin/phpunit --configuration phpunit.xml
