@@ -4,6 +4,8 @@ php:
   - 8.0
   - 8.1
 
+dist: bionic
+
 arch:
   - amd64
   - arm64
